@@ -9,6 +9,35 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
+<main class="container">
+
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </section>
+
+    <section class="todo-list">
+        <ul id="taskList">
+            <li class="task">
+                <input type="checkbox" class="task-check">
+                <span class="task-text">Test1</span>
+                <span class="task-date">2026-03-27</span>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <input type="checkbox" class="task-check">
+                <span class="task-text">Test2</span>
+                <span class="task-date">2026-12-27</span>
+                <button class="delete-btn">Delete</button>
+            </li>
+        </ul>
+    </section>
+
+    <section class="add-task">
+        <input type="text" id="taskInput" placeholder="New task...">
+        <input type="date" id="dateInput">
+        <button id="addBtn">Save</button>
+    </section>
+</main>
 
 </body>
 </html>
