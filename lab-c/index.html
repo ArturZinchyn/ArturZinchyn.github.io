@@ -2,13 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imie Nazwisko (00000) - PTW LAB C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artur Zinchyn (57744) - PTW LAB C</title>
 
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+<h1>Lab-C</h1>
+
+<div class="main">
+
+    <div class="top">
+        <div class="left">
+            <div id="map"></div>
+
+            <div class="controls">
+                <button id="locationBtn">Get my location</button>
+                <button id="downloadBtn">Save</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div id="board">
+                <div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="puzzle-container"></div>
+
+</div>
+
+<canvas id="canvas" width="400" height="400"></canvas>
 
 </body>
 </html>
