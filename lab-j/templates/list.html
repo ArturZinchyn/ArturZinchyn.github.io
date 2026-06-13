@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Lista broni</h2>
+<a href="{{ url_for('create') }}">Dodaj nowy</a><table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Caliber</th>
+            <th>Capacity</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item['id'] }}</td>
+            <td>{{ item['name'] }}</td>
+            <td>{{ item['caliber'] }}</td>
+            <td>{{ item['magazine_capacity'] }}</td>
+            <td>
+                <a href="{{ url_for('view', id=item['id']) }}">Podgląd</a>
+                <a href="{{ url_for('edit', id=item['id']) }}">Edycja</a>
+                <form action="{{ url_for('delete', id=item['id']) }}" method="POST" style="display:inline;">
+    <button type="submit" style="background:none; border:none; padding:0; color:#ff4d4d; font-weight:500; font-size:16px; font-family:inherit; cursor:pointer; text-decoration:none;">Usuń</button>
+</form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

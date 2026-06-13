@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nowa broń{% endblock %}
+
+{% block body %}
+    <h1>Nowa broń</h1>
+
+    <div class="card shadow-sm border-danger mb-4">
+        <div class="card-body">
+            {{ include('guns/_form.html.twig', {'button_label': 'Zapisz'}) }}
+        </div>
+    </div>
+
+    <a href="{{ path('app_guns_index') }}" class="btn btn-secondary">Powrót do listy</a>
+{% endblock %}

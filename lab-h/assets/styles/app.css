@@ -1,0 +1,18 @@
+body {
+    background-color: #fcfcfc;
+}
+
+h1 {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.custom-header, .custom-footer {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.custom-header a, .custom-footer p {
+    color: white;
+    text-decoration: none;
+}
