@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gun Details</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/guns">GUNS</a></li>
+        </ul>
+    </nav>
+
+    <main class="show">
+        <h1><%= item.name %></h1>
+
+        <article>
+            <p>Caliber: <%= item.caliber %></p>
+            <p>Magazine Capacity: <%= item.magazine_capacity %></p>
+        </article>
+
+        <ul class="action-list">
+            <li><a href="/guns">Back to list</a></li>
+            <li><a href="/guns/<%= item.id %>/edit">Edit</a></li>
+        </ul>
+    </main>
+</body>
+</html>

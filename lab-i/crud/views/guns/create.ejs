@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Gun</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/guns">GUNS</a></li>
+        </ul>
+    </nav>
+
+    <main class="edit">
+        <h1>Create Gun</h1>
+
+        <form action="/guns/create" method="POST" class="edit-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="caliber">Caliber</label>
+                <input type="text" id="caliber" name="caliber" required>
+            </div>
+            <div class="form-group">
+                <label for="magazine_capacity">Magazine Capacity</label>
+                <input type="text" id="magazine_capacity" name="magazine_capacity" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <br>
+        <ul class="action-list">
+            <li><a href="/guns">Back to list</a></li>
+        </ul>
+    </main>
+</body>
+</html>

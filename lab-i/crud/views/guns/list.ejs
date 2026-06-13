@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guns List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/guns">GUNS</a></li>
+        </ul>
+    </nav>
+
+    <main class="index">
+        <h1>Guns List</h1>
+        <p><a href="/guns/create">Create new</a></p>
+
+        <ul class="index-list">
+        <% if (items.length > 0) { %>
+            <% items.forEach(function(item) { %>
+                <li>
+                    <h3><%= item.name %></h3>
+                    <ul class="action-list">
+                        <li><a href="/guns/<%= item.id %>">Details</a></li>
+                        <li><a href="/guns/<%= item.id %>/edit">Edit</a></li>
+                    </ul>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <li><p>Немає записів.</p></li>
+        <% } %>
+        </ul>
+    </main>
+</body>
+</html>
